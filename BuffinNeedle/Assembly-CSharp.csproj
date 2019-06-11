@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\detectCollision.cs" />
      <Compile Include="Assets\Scripts\mainContraol.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/10949/Buffon-Needle/BuffinNeedle/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
