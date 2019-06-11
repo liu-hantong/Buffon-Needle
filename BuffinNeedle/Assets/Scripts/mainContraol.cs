@@ -40,7 +40,7 @@ public class mainContraol : MonoBehaviour
         PlayCanvas.gameObject.SetActive(false);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         CollideTime.text = collisionNumber.ToString();
         if (currentThrow < n && gameStart)

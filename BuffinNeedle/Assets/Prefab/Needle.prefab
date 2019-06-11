@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2017771429139649307}
   - component: {fileID: 8923453340554810092}
   - component: {fileID: 9048221765175291043}
-  - component: {fileID: 5397880082495158614}
   - component: {fileID: 704932133278123940}
   - component: {fileID: 5826717971012462427}
+  - component: {fileID: 1960650804879633569}
   m_Layer: 0
   m_Name: Needle
   m_TagString: needle
@@ -81,19 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5397880082495158614
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3010840953221129848}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &704932133278123940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119,7 +106,19 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
+--- !u!114 &1960650804879633569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010840953221129848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff78c02069e6fd48bdb11f71f0f4e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
