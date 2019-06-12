@@ -47,9 +47,16 @@ public class mainContraol : MonoBehaviour
         {
             //create needle to throw
             ThrowTime.text = (++currentThrow).ToString();
-            Vector3 PositionOfNeedle = new Vector3(392.07f, 210f, UnityEngine.Random.Range(-(float)38 + (float)(a/2) / (float)1000, -(float)38 + (float)a / (float)1000));
-            GameObject NewNeedle = Instantiate(NeedlePrefab, PositionOfNeedle, Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 180f), 0f));
+            float ZPositionZofNeedle = UnityEngine.Random.Range(-(float)38 + ((float)a / 2) / (float)1000, -(float)38 + (float)a / (float)1000);
+            Vector3 PositionOfNeedle = new Vector3(392.07f, 200.02f, ZPositionZofNeedle);
+            float AngelOfNeedle = UnityEngine.Random.Range(0f, 180f);
+            GameObject NewNeedle = Instantiate(NeedlePrefab, PositionOfNeedle, Quaternion.Euler(0f, AngelOfNeedle, 0f));
             NewNeedle.transform.localScale = new Vector3( (float)l / 1000f, 0.01f, 0.01f);
+            //if would be collided
+            if ((float)a / 1000 - (ZPositionZofNeedle + 38f) < ((float)l / 2000) * Math.Sin(AngelOfNeedle / (float)180 * Math.PI)) 
+            {
+                collisionNumber++;
+            }
         }
     }
 

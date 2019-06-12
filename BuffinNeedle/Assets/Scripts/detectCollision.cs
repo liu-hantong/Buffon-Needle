@@ -12,15 +12,15 @@ public class detectCollision : MonoBehaviour
         mainControl = GameObject.FindObjectOfType<mainContraol>();
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "needle")
         {
-            ++collideNumber;
-            Debug.Log(col.gameObject.transform.localScale.x);
-            Destroy(col.gameObject);
+            //++collideNumber;
+            //Debug.Log(col.gameObject.transform.localScale.x);
+            //Destroy(col.gameObject);
         }
         //update the score
-        mainControl.collisionNumber = collideNumber;
+        //mainControl.collisionNumber = collideNumber;
     }
 }
